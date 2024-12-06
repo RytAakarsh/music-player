@@ -1,0 +1,104 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto Slab", serif;
+    width: 100%;
+    height: 100vh;
+    background-color: #121213;
+    display: grid;
+    place-items: center;
+}
+header {
+    width: 85%;
+    height: 95%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu-side {
+    width: 25%;
+    height: 90%;
+    /* border: 1px solid #fff; */
+    background-color: #111727;
+    box-shadow: 5px 0px 2px #090f1f;
+}
+.song-side {
+    width: 75%;
+    height: 90%;
+    /* border: 1px solid #fff; */
+    background-color: #0b1320;
+}
+.master-play {
+    width: 100%;
+    height: 10%;
+    background-color: #111727;
+    /* border: 1px solid #fff; */
+    box-shadow: 0px 3px 8px #090f1f;
+}
+.menu-side h1 {
+    color: #fff;
+    font-size: 20px;
+    margin: 15px 0 0 20px;
+    font-weight: 500;
+}
+.menu-side h4 {
+    color: #4c5262;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: .3s linear;
+}
+.menu-side h4:hover{
+   color: #36e2ec;
+}
+.playlist {
+    margin: 40px 0 0 20px;
+}
+/* bjhbv */
+.playlist span {
+    position: relative;
+    margin-right: 35px;
+}
+.playlist span::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 2px solid #4c5262;
+    border-radius: 50%;
+    top: -4px;
+    transition: .3s linear;
+}
+.playlist h4:hover span::before {
+    border: 2px solid #fff;
+}
+.playlist h4 .fa-solid {
+    display: none ;
+}
+.playlist h4.active span {
+    color: #36e2ec;
+}
+.playlist h4.active span {
+    display: none ;
+}
+.playlist h4 .active .fa-solid {
+    display: flex;
+    margin-right: 20px;
+}
+
+/* bdjwb */
+
+.menu-song {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #fff;
+    margin-top: 40px;
+}
