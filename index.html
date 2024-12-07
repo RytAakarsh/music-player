@@ -11,7 +11,7 @@
 <body>
    <header>
     <div class="menu-side">
-        <h1>Playlist</h1>
+        <h1>सुनते हैं !</h1>
         <div class="playlist">
         <h4 class="active"><span></span><i class="fa-solid fa-music"></i>Playlist</h4>
         <h4><span></span><i class="fa-solid fa-music"></i>Last Listening</h4>
@@ -20,13 +20,105 @@
         <div class="menu-song">
             <li class="songItem">
                 <span>01</span>
-                <img src="">
-                <h5>Mere Dholna 3.0</h5>
+                <img src="https://pendujatt.com.se/upload_file/10/400x400/thumb_6730c60d9b2e2.jpg">
+                <h5>Mere Dholna 3.0 <br>
+                <div class="subtitle">Singer-Sonu Nigam 
+                </div>
+                </h5>
+                <i class="fa-solid playlistPlay  fa-circle-play" id="1" style="color: #fcfcfc;"></i>
             </li>
+            <li class="songItem">
+                <span>02</span>
+                <img src="https://c.saavncdn.com/443/Bhool-Bhulaiyaa-3-Hindi-2024-20241108131003-500x500.jpg">
+                <h5>Ami Je Tomar 3.0 <br>
+                <div class="subtitle">Singer-Shreya Ghoshal 
+                </div>
+                </h5>
+                <i class="fa-solid playlistPlay  fa-circle-play" id="2" style="color: #fcfcfc;"></i>
+            </li>
+            <li class="songItem">
+                <span>03</span>
+                <img src="https://c.saavncdn.com/426/Gangs-Of-Wasseypur-Hindi-2012-20221212051137-500x500.jpg">
+                <h5>Ik Bagal <br>
+                <div class="subtitle">Singer-Piyush Mishra 
+                </div>
+                </h5>
+                <i class="fa-solid playlistPlay  fa-circle-play" id="3" style="color: #fcfcfc;"></i>
+            </li>
+            <li class="songItem">
+                <span>04</span>
+                <img src="https://c.saavncdn.com/243/Once-Upon-A-Time-In-Mumbaai-Dobara-2013-500x500.jpg">
+                <h5>Ye Tuney Kya Kiya<br>
+                <div class="subtitle">Singer-Javed Bashir 
+                </div>
+                </h5>
+                <i class="fa-solid playlistPlay  fa-circle-play" id="4" style="color: #fcfcfc;"></i>
+            </li>
+            <li class="songItem">
+                <span>05</span>
+                <img src="https://c.saavncdn.com/334/Raees-Hindi-2016-20200430093124-500x500.jpg">
+                <h5>Zaalima<br>
+                <div class="subtitle">Singer-Arijit Singh | Harshdeep Kaur
+                </div>
+                </h5>
+                <i class="fa-solid playlistPlay  fa-circle-play" id="5" style="color: #fcfcfc;"></i>
+            </li>
+            <li class="songItem">
+                <span>06</span>
+                <img src="https://c.saavncdn.com/310/Kalaakaar-Hindi-2016-20170918062425-500x500.jpg">
+                <h5>Neele Neele ambar Par<br>
+                <div class="subtitle">Singer-Kishore Kumar 
+                </div>
+                </h5>
+                <i class="fa-solid playlistPlay  fa-circle-play" id="6" style="color: #fcfcfc;"></i>
+            </li>
+            <li class="songItem">
+                <span>07</span>
+                <img src="https://c.saavncdn.com/306/Lost-Found-Hindi-2024-20240517153134-500x500.jpg">
+                <h5>Ishq-Lost Found<br>
+                <div class="subtitle">Singer-Faheem Abdullah|Rauhan Malik
+                </div>
+                </h5>
+                <i class="fa-solid playlistPlay  fa-circle-play" id="7" style="color: #fcfcfc;"></i>
+            </li>
+        
+
+
+
         </div>
+
+    <!-- music menu song div end above -->
+
     </div>
     <div class="song-side"></div>
-    <div class="master-play"></div>
+    <div class="master-play">
+        <div class="wave">
+            <div class="wave1"></div>
+            <div class="wave2"></div>
+            <div class="wave3"></div>
+        </div>
+
+        <img src="https://c.saavncdn.com/306/Lost-Found-Hindi-2024-20240517153134-500x500.jpg" id="poster-master-play">
+        <h5 id="title">
+            Ishq-Lost Found
+            <div class="subtitle">Singer-Faheem Abdullah|Rauhan Malik</div>
+        </h5>
+        <div class="icon">
+            <i class="fa-solid fa-music" style="color: #fafcff;"></i>
+            <i class="fa-solid fa-backward-step" style="color: #fafafa;"></i>
+            <i class="fa-solid fa-play" style="color: #fafafa;"></i>
+            <i class="fa-solid fa-forward-step" style="color: #fcfcfc;"></i>
+            <i class="fa-solid fa-download" style="color: #ffffff;"></i>
+        </div>
+        <span id="currentstart">0:00</span>
+        <div class="bar">
+            <input type="range" id="seek" min="0" max="100">
+        </div>
+        
+
+
+
+    </div>
    </header> 
     
     <script src="script.js"></script>
