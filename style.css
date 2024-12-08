@@ -575,3 +575,50 @@ header {
    text-overflow: ellipsis;
    color: #4c5262;
 }
+.song-side .popular-artist {
+    width: 90%;
+    height: auto;
+    /* border: 1px solid #fff; */
+    margin: auto;
+    margin-top: 15px;
+}
+.song-side .popular-artist .h4 {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.song-side .popular-artist .h4 .btn-s .fa-solid{
+    color: #a4a8b4;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.song-side .popular-artist .h4 .fa-solid:hover{
+    color: #fff;
+}
+.song-side .popular-artist .item {
+    width: 100%;
+    height: 110px;
+    margin-top: 15px;
+    display: flex;
+    /* border: 1px solid #fff; */
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+.song-side .popular-artist .item::-webkit-scrollbar {
+   display: none;
+}
+.song-side .popular-artist .item li {
+    list-style-type: none;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.song-side .popular-artist .item li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
