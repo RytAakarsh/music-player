@@ -81,16 +81,42 @@
                 </h5>
                 <i class="fa-solid playlistPlay  fa-circle-play" id="7" style="color: #fcfcfc;"></i>
             </li>
-        
-
-
+            <li>
+                <a href="https://www.spotify.com/in-en/legal/">Legal</a>
+                <a href="https://www.spotify.com/in-en/safetyandprivacy/">Privacy Center</a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a>
+                <a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a>
+            </li>
 
         </div>
 
     <!-- music menu song div end above -->
+    
 
     </div>
-    <div class="song-side"></div>
+
+
+    <div class="song-side">
+
+        <img src="backgroundimg.png" class="bg-image">
+
+    <nav>
+        <ul>
+            <li>Discover</li>
+            <li>My Library</li>
+            <li>Radio</li>
+        </ul>
+    </nav>
+
+
+    </div>
+
+
+
+
+
     <div class="master-play">
         <div class="wave">
             <div class="wave1"></div>
@@ -113,12 +139,21 @@
         <span id="currentstart">0:00</span>
         <div class="bar">
             <input type="range" id="seek" min="0" max="100">
+            <div class="bar2" id="bar2"></div>
+            <div class="dot"></div>
         </div>
-        
-
-
+        <span id="currentend">0:30</span>
+    <div class="vol">
+        <i class="fa-solid fa-volume-low" id="vol-icon" style="color: #fcfcfc;"></i>
+        <input type="range" min="0" max="100" id="vol">
+        <div class="vol-bar"></div>
+        <div class="dot" id="vol-dot"></div>
+    </div>
 
     </div>
+
+  
+    
    </header> 
     
     <script src="script.js"></script>
