@@ -250,14 +250,29 @@ masterPlay.addEventListener('click', ()=>{
 })
 
 let index = 0;
-let poster_master_play = document.getElementById('poster-master-play'); 
+let poster_master_play = document.getElementById('poster-master-play');
+let title = document.getElementById('title'); 
 Array.from(document.getElementsByClassName('playlistPlay')).forEach((e) => {
     e.addEventListener('click',(el) => {
         index = el.target.id;
         console.log(index);
         music.src = `Musics/${index}.mp3`;
-        poster_master_play = `img/${index}.jpg`;
+        poster_master_play.src = `images/${index}.jpg`;
         music.play();
+        wave.classList.add('active1');
+        masterPlay.classList.remove('fa-play');
+        masterPlay.classList.add('fa-pause');
+        masterPlay.style.color = '#fcfcfd';
+
+        let songTitles = songs.filter((els) => {
+            return els.id == index;
+        });
+
+        songTitles.forEach(elss => {
+            let {songName} = elss;
+            title.innerHTML = songName;
+        })
+
     })
 })
 
