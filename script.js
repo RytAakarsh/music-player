@@ -1,4 +1,4 @@
-const music = new Audio('./Musics/ishq.mp3');
+const music = new Audio('./Musics/1.mp3');
 music.addEventListener('canplaythrough', () => {
     console.log("Audio loaded successfully.");
 }, false);
@@ -34,7 +34,7 @@ const songs = [
     },
     {
         id : "4",
-        songName: `>Ye Tuney Kya Kiya <br>
+        songName: `Ye Tuney Kya Kiya <br>
                                                                             <div class="subtitle">Singer-Javed Bashir | Pritam 
                                                                             </div>`,
         poster: "https://c.saavncdn.com/243/Once-Upon-A-Time-In-Mumbaai-Dobara-2013-500x500.jpg"
@@ -64,16 +64,16 @@ const songs = [
         poster: "https://c.saavncdn.com/306/Lost-Found-Hindi-2024-20240517153134-500x500.jpg"
 
     },
-    {
-        id : "8",
-        songName: `Ishq-Lost Found <br>
-                                            <div class="subtitle">Singer-Ameer | faheem | Rauhan 
-                                            </div>`,
-        poster: "https://c.saavncdn.com/306/Lost-Found-Hindi-2024-20240517153134-500x500.jpg"
+    // {
+    //     id : "8",
+    //     songName: `Ishq-Lost Found <br>
+    //                                         <div class="subtitle">Singer-Ameer | faheem | Rauhan 
+    //                                         </div>`,
+    //     poster: "https://c.saavncdn.com/306/Lost-Found-Hindi-2024-20240517153134-500x500.jpg"
 
-    },
+    // },
     {
-        id : "9",
+        id : "1",
         songName: `Mere Dholna 3.0 <br>
                 <div class="subtitle">Singer-Sonu Nigam 
                 </div>`,
@@ -81,7 +81,7 @@ const songs = [
 
     },
     {
-        id : "10",
+        id : "8",
         songName: `Aaj Bhi<br>
                     <div class="subtitle">Singer-Vishal Mishra 
                     </div>`,
@@ -89,7 +89,7 @@ const songs = [
 
     },
     {
-        id : "11",
+        id : "2",
         songName: `Ami Je Tomar <br>
                         <div class="subtitle">Singer-Amaal | Shreya
                         </div>`,
@@ -97,7 +97,7 @@ const songs = [
 
     },
     {
-        id : "12",
+        id : "9",
         songName: `Aarambh <br>
                             <div class="subtitle">Singer-Piyush Mishra 
                             </div>`,
@@ -105,7 +105,7 @@ const songs = [
 
     },
     {
-        id : "13",
+        id : "10",
         songName: `The Nights(Avicii) <br>
                                 <div class="subtitle">Singer-Avicii 
                                 </div>`,
@@ -113,14 +113,14 @@ const songs = [
 
     },
     {
-        id : "14",
+        id : "12",
         songName: `Baghon Mein Bahar Hai <br>
                                     <div class="subtitle">Singer-Mohammed Rafi | Lata Mangeshkar 
                                     </div>`,
         poster: "https://c.saavncdn.com/951/Aradhana-Hindi-1969-500x500.jpg"
     },
     {
-        id : "15",
+        id : "3",
         songName: `Ik Bagal <br>
                                         <div class="subtitle">Singer-Piyush Mishra 
                                         </div>`,
@@ -128,7 +128,7 @@ const songs = [
 
     },
     {
-        id : "16",
+        id : "7",
         songName: `Ishq-Lost Found <br>
                                             <div class="subtitle">Singer-Ameer | faheem | Rauhan 
                                             </div>`,
@@ -136,14 +136,14 @@ const songs = [
 
     },
     {
-        id : "17",
+        id : "13",
         songName: `Kisi Ki Muskurahaton Se <br>
                                             <div class="subtitle">Singer- Sankar ft. Mukesh
                                             </div>`,
         poster: "https://c.saavncdn.com/428/Anari-Hindi-1975-20200919143923-500x500.jpg"
     },
     {
-        id : "18",
+        id : "14",
         songName: `Mere Mahboob Qayamaat Hogi <br>
                                                 <div class="subtitle">Singer-Kishore Kumar 
                                                 </div>`,
@@ -151,7 +151,7 @@ const songs = [
 
     },
     {
-        id : "19",
+        id : "15",
         songName: `Mere Samnevali Khidki Mein <br>
                                                     <div class="subtitle">Singer-R.D.Burman ft. Kishore Kumar 
                                                     </div>`,
@@ -159,7 +159,7 @@ const songs = [
 
     },
     {
-        id : "20",
+        id : "16",
         songName: `Millionaire <br>
                                                         <div class="subtitle">Singer-Yo Yo Honey Singh 
                                                         </div>`,
@@ -167,7 +167,7 @@ const songs = [
 
     },
     {
-        id : "21",
+        id : "6",
         songName: `Neele Neele Ambar Par <br>
                                                             <div class="subtitle">Singer-Kalyanji | Anandji | Kishore 
                                                             </div>`,
@@ -175,7 +175,7 @@ const songs = [
 
     },
     {
-        id : "22",
+        id : "17",
         songName: `Sajni <br>
                                                                 <div class="subtitle">Singer-Arijit Singh
                                                                 </div>`,
@@ -183,7 +183,7 @@ const songs = [
 
     },
     {
-        id : "23",
+        id : "18",
         songName: `Ud Jayega Hans Akela <br>
                                                                     <div class="subtitle">Singer-Divya Kumar | Ravi Ra 
                                                                     </div>`,
@@ -191,7 +191,7 @@ const songs = [
 
     },
     {
-        id : "24",
+        id : "19",
         songName: `Uptown Funk <br>
                                                                         <div class="subtitle">Singer-Mark Ronson ft. Bruno Mars, Jeff Bhasker 
                                                                         </div>`,
@@ -199,7 +199,7 @@ const songs = [
 
     },
     {
-        id : "25",
+        id : "4",
         songName: `>Ye Tuney Kya Kiya <br>
                                                                             <div class="subtitle">Singer-Javed Bashir | Pritam 
                                                                             </div>`,
@@ -207,7 +207,7 @@ const songs = [
 
     },
     {
-        id : "26",
+        id : "20",
         songName: `Ye Jo Mohabbat Hai <br>
                                                                                 <div class="subtitle">Singer-R.D.Burman ft. KIshore Kumar 
                                                                                 </div>`,
@@ -215,7 +215,7 @@ const songs = [
 
     },
     {
-        id : "27",
+        id : "5",
         songName: `Zaalima <br>
                                                                                     <div class="subtitle">Singer-Arijit Singh | Harshdeep Kaur
                                                                                     </div>`,
@@ -249,8 +249,17 @@ masterPlay.addEventListener('click', ()=>{
     }
 })
 
-
-
+let index = 0;
+let poster_master_play = document.getElementById('poster-master-play'); 
+Array.from(document.getElementsByClassName('playlistPlay')).forEach((e) => {
+    e.addEventListener('click',(el) => {
+        index = el.target.id;
+        console.log(index);
+        music.src = `Musics/${index}.mp3`;
+        poster_master_play = `img/${index}.jpg`;
+        music.play();
+    })
+})
 
 
 
