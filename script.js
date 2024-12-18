@@ -200,7 +200,7 @@ const songs = [
     },
     {
         id : "4",
-        songName: `>Ye Tuney Kya Kiya <br>
+        songName: `Ye Tuney Kya Kiya <br>
                                                                             <div class="subtitle">Singer-Javed Bashir | Pritam 
                                                                             </div>`,
         poster: "https://c.saavncdn.com/243/Once-Upon-A-Time-In-Mumbaai-Dobara-2013-500x500.jpg"
@@ -324,30 +324,73 @@ let vol_bar = document.getElementsByClassName('vol-bar')[0];
 let vol_dot = document.getElementById('vol-dot');
 
 vol.addEventListener('change', ()=> {
-    if (vol.value == 0 ){
-        vol_icon.classList.remove('fa-volume-high')
-        vol_icon.classList.remove('fa-volume-low')
-        style.color = '#fafafa';
-        vol_icon.classList.add('fa-volume-off')
-        style.color = '#fafafa';
+    if (vol.value == 0) {
+        vol_icon.classList.remove('fa-volume-high', 'fa-volume-low');
+        vol_icon.classList.add('fa-volume-off');
+        vol_icon.style.color = '#fafafa';
     }
-    if ( vol.value > 0 ){
-        vol_icon.classList.remove('fa-volume-high')
-        vol_icon.classList.add('fa-volume-low')
-        style.color = '#fafafa';
-        vol_icon.classList.remove('fa-volume-off')
-        style.color = '#fafafa';
+     if (vol.value > 0 ) {
+        vol_icon.classList.remove('fa-volume-high', 'fa-volume-off');
+        vol_icon.classList.add('fa-volume-low');
+        vol_icon.style.color = '#fafafa';
+    } 
+    if (vol.value > 50) {
+        vol_icon.classList.remove('fa-volume-low', 'fa-volume-off');
+        vol_icon.classList.add('fa-volume-high');
+        vol_icon.style.color = '#fafafa';
     }
-    if ( vol.value > 50 ){
-        vol_icon.classList.add('fa-volume-high')
-        vol_icon.classList.remove('fa-volume-low')
-        style.color = '#fafafa';
-        vol_icon.classList.remove('fa-volume-off')
-        style.color = '#fafafa';
-    }
-})
+    let vol_a = vol.value;
+    vol_bar.style.width = `${vol_a}%`;
+    vol_dot.style.left = `${vol_a}%`;
+    music.volume = vol_a / 100 ;
+});
 
 
+let back = document.getElementById('back');
+let next = document.getElementById('next');
+
+back.addEventListener('click', ()=> {
+    index -= 1;
+    if ( index < 1 ){
+        index = Array.from(document.getElementsByClassName('songItem')).length;
+    }
+    music.src = `Musics/${index}.mp3`;
+        poster_master_play.src = `images/${index}.jpg`;
+        music.play();
+        wave.classList.add('active1');
+        masterPlay.classList.remove('fa-play');
+        masterPlay.classList.add('fa-pause');
+        masterPlay.style.color = '#fcfcfd';
+
+        let songTitles = songs.filter((els) => {
+            return els.id == index;
+        });
+
+        songTitles.forEach(elss => {
+            let {songName} = elss;
+            title.innerHTML = songName;
+        })
+
+});
+next.addEventListener('click', ()=> {
+    index++;
+    music.src = `Musics/${index}.mp3`;
+        poster_master_play.src = `images/${index}.jpg`;
+        music.play();
+        wave.classList.add('active1');
+        masterPlay.classList.remove('fa-play');
+        masterPlay.classList.add('fa-pause');
+        masterPlay.style.color = '#fcfcfd';
+
+        let songTitles = songs.filter((els) => {
+            return els.id == index;
+        });
+
+        songTitles.forEach(elss => {
+            let {songName} = elss;
+            title.innerHTML = songName;
+        })
+});
 
 
 
