@@ -277,6 +277,75 @@ Array.from(document.getElementsByClassName('playlistPlay')).forEach((e) => {
 })
 
 
+let currentstart = document.getElementById('currentstart');
+let currentend = document.getElementById('currentend');
+let seek = document.getElementById('seek');
+let bar2 = document.getElementById('bar2');
+let dot = document.getElementsByClassName('dot')[0];
+
+
+music.addEventListener('timeupdate', () => {
+    let music_curr = music.currentTime;
+    let music_dur = music.duration;
+    // console.log(music_curr);
+
+    let min1 = Math.floor(music_dur / 60 );
+    let sec1 = Math.floor(music_dur % 60 );
+    
+    if ( sec1 < 10 ){
+        sec1 = `0${sec1}`;
+    }
+    currentend.innerText = `${min1}:${sec1}`;
+    
+
+    let min2 = Math.floor(music_curr / 60 );
+    let sec2 = Math.floor(music_curr % 60 );
+    if ( sec2 < 10 ){
+        sec2 = `0${sec2}`;
+    }
+    currentstart.innerText = `${min2}:${sec2}`;
+
+   let progressBar = parseInt((music_curr / music_dur) * 100 );
+   seek.value = progressBar;
+   let seekBar = seek.value;
+   bar2.style.width = `${seekBar}%`;
+   dot.style.left = `${seekBar}%`;
+});
+
+seek.addEventListener('change', () => {
+    // Set the audio's current time based on the seek bar value
+    music.currentTime = (seek.value * music.duration) / 100;
+});
+
+
+let vol_icon = document.getElementById('vol-icon');
+let vol = document.getElementById('vol');
+let vol_bar = document.getElementsByClassName('vol-bar')[0];
+let vol_dot = document.getElementById('vol-dot');
+
+vol.addEventListener('change', ()=> {
+    if (vol.value == 0 ){
+        vol_icon.classList.remove('fa-volume-high')
+        vol_icon.classList.remove('fa-volume-low')
+        style.color = '#fafafa';
+        vol_icon.classList.add('fa-volume-off')
+        style.color = '#fafafa';
+    }
+    if ( vol.value > 0 ){
+        vol_icon.classList.remove('fa-volume-high')
+        vol_icon.classList.add('fa-volume-low')
+        style.color = '#fafafa';
+        vol_icon.classList.remove('fa-volume-off')
+        style.color = '#fafafa';
+    }
+    if ( vol.value > 50 ){
+        vol_icon.classList.add('fa-volume-high')
+        vol_icon.classList.remove('fa-volume-low')
+        style.color = '#fafafa';
+        vol_icon.classList.remove('fa-volume-off')
+        style.color = '#fafafa';
+    }
+})
 
 
 
